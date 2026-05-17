@@ -94,11 +94,6 @@ def collect_possible_renames(context):
     ]
 
 def rename_bone(bone,context,newname: str,reparent=False,run_callback=True):
-    bone_name = bone.name
-    for mesh in context.active_object.children:
-        for vg in context.active_object.vertex_groups:
-            if vg.name == bone_name:
-                vg.name = newname
     bone.name = newname
     associated_rule = rules.get(newname,None)
     if reparent and associated_rule is not None:
