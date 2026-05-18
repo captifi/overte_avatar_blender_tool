@@ -56,9 +56,10 @@ Now, we move onto using the extension in accordance with [The Avatar Standards d
 Select the armature using Object Mode, then change to Edit Mode.
 
 This extension adds three menu items to the Armature menu in the top left of the 3D viewport (known as `VIEW3D_MT_edit_armature`):
- 0. Auto Rename
- 0. Auto Rename and Reparent
- 0. Auto Flow Bone
+ 
+ 1. Auto Rename
+ 1. Auto Rename and Reparent
+ 1. Auto Flow Bone
 
 For each of the above mentioned operators, I recommend right clicking on each and using `Assign Shortcut...` to assign these operators to <kbd>5</kbd>, <kbd>6</kbd>, and <kbd>7</kbd> respectively. However, you may choose to assign these operators to whatever keys you desire.
 
@@ -71,15 +72,15 @@ For each of the above mentioned operators, I recommend right clicking on each an
 
 We will now begin using the `Auto Rename` and `Auto Rename and Reparent` operators, which are the same operator, assume "the operator" is referring to the `Auto Rename` operator.
 
- 0. Select the `Hips` bone of your avatar and Invoke.
- 0. Select the `Spine` bone of your avatar and Invoke, which should bring up a menu where you can select `Spine`
- 0. Assuming the active bone shifts to the next bone, Invoke and select `Spine2` if the bone is the Chest bone, or `Spine1` if it is between the Spine and Chest bones, Then Invoke on the Chest bone to rename it to `Spine2`.
- 0. Select the Left Shoulder Bone and Invoke, then select `LeftShoulder`, and keep Invoking down the arm until you have renamed the `LeftHand` bone.
- 0. For each finger on the hand, select the start of the finger, use Invoke to specify which finger you are renaming it to, then Invoke down the length of the finger, and repeat for all fingers on that hand.
- 0. Repeat the steps taken for the Left Shoulder on the Right Shoulder.
- 0. Invoke the operator on the Neck and Head bones,
- 0. Invoke the operator on the Left Eye and Right Eye bones,
- 0. Invoke the operator on the Left Leg and its children, then the Right Leg and its children.
+ 1. Select the `Hips` bone of your avatar and Invoke.
+ 1. Select the `Spine` bone of your avatar and Invoke, which should bring up a menu where you can select `Spine`
+ 1. Assuming the active bone shifts to the next bone, Invoke and select `Spine2` if the bone is the Chest bone, or `Spine1` if it is between the Spine and Chest bones, Then Invoke on the Chest bone to rename it to `Spine2`.
+ 1. Select the Left Shoulder Bone and Invoke, then select `LeftShoulder`, and keep Invoking down the arm until you have renamed the `LeftHand` bone.
+ 1. For each finger on the hand, select the start of the finger, use Invoke to specify which finger you are renaming it to, then Invoke down the length of the finger, and repeat for all fingers on that hand.
+ 1. Repeat the steps taken for the Left Shoulder on the Right Shoulder.
+ 1. Invoke the operator on the Neck and Head bones,
+ 1. Invoke the operator on the Left Eye and Right Eye bones,
+ 1. Invoke the operator on the Left Leg and its children, then the Right Leg and its children.
 
 > [!TIP]
 > If you find a bone that does not rename, even if you think it should, try using the `Auto Rename and Reparent` version of the operator. You may need to guess when to use the reparent mode.
@@ -96,9 +97,9 @@ Now, we can start making use of the `Auto Flow Bone` operator.
 
 Usage of this operator is simple:
 
- 0. Select the start of a chain of bones that you would like to be "jiggly"
- 0. Invoke the `Auto Flow Bone` operator and input the name you would like to assign to this chain of bones. Pressing Enter twice should now execute the operator.
- 0. The operator will now start naming the chain of bones with the convention `flow_name_index` with indices starting from 1, and will stop after it has renamed a bone with a number of children that is not equal to one (so either a "dead end" or a "fork in the road")
+ 1. Select the start of a chain of bones that you would like to be "jiggly"
+ 1. Invoke the `Auto Flow Bone` operator and input the name you would like to assign to this chain of bones. Pressing Enter twice should now execute the operator.
+ 1. The operator will now start naming the chain of bones with the convention `flow_name_index` with indices starting from 1, and will stop after it has renamed a bone with a number of children that is not equal to one (so either a "dead end" or a "fork in the road")
 
 > [!NOTE]
 > To use these flow bones, use the `Flow` app in Overte with your avatar equipped. More on this later.
@@ -107,9 +108,9 @@ Now, we need to rename some of your avatar's meshes' shape keys (aka blendshapes
 
 There are three important blendshapes you will want on your avatar for it to be expressive:
 
- 0. `JawOpen`
- 0. `EyeBlink_L`
- 0. `EyeBlink_R`
+ 1. `JawOpen`
+ 1. `EyeBlink_L`
+ 1. `EyeBlink_R`
 
 If your avatar does not have an obviously named "Open Jaw" shape key, you should direct your attention to any shape keys named "aa", as that shape key can be renamed to `JawOpen`
 
